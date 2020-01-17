@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+## Statistical Machine Learning 1RT700
 
-You can use the [editor on GitHub](https://github.com/uu-sml/course-sml-public/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This repository is used to host the files needed for the exercise sessions in the course [Statistical Machine Learning](http://www.it.uu.se/edu/course/homepage/sml) at Uppsala University.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/uu-sml/course-sml-public/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+| Session | Type          | Files |
+|---------|---------------|-------|
+| 1       | Pen-and-paper | <a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session1.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" title="Download pdf" width="20" /></a> |
+| 2       | Computer      | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session2.ipynb"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Notebook" title="Download notebook" width="20" /></a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/uu-sml/course-sml-public/blob/master/SML-ex_session2.ipynb) <a href="https://uu-sml.github.io/course-sml-public/solutions/SML-ex-sol_session2.html">Solutions</a> -->|
+| 3       | Pen-and-paper | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session3.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" title="Download pdf" width="20" /></a> --> |
+| 4       | Computer      | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session4.ipynb"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Notebook" title="Download notebook" width="20" /></a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/uu-sml/course-sml-public/blob/master/SML-ex_session4.ipynb) <a href="https://uu-sml.github.io/course-sml-public/solutions/SML-ex-sol_session4.html">Solutions</a>--> |
+| 5       | Pen-and-paper | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session5.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" title="Download pdf" width="20" /></a>--> |
+| 6       | Computer      | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session6.ipynb"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Notebook" title="Download notebook" width="20" /></a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/uu-sml/course-sml-public/blob/master/SML-ex_session6.ipynb) <a href="https://uu-sml.github.io/course-sml-public/solutions/SML-ex-sol_session6.html">Solutions</a> -->|
+| 7       | Pen-and-paper | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session7.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" title="Download pdf" width="20" /></a>--> |
+| 8       | Computer      | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session8.ipynb"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Notebook" title="Download notebook" width="20" /></a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/uu-sml/course-sml-public/blob/master/SML-ex_session8.ipynb) <a href="https://uu-sml.github.io/course-sml-public/solutions/SML-ex-sol_session8.html">Solutions</a>--> |
+| 9       | Computer      | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session9.ipynb"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Notebook" title="Download notebook" width="20" /></a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/uu-sml/course-sml-public/blob/master/SML-ex_session9.ipynb) <a href="https://uu-sml.github.io/course-sml-public/solutions/SML-ex-sol_session9.html">Solutions</a>--> |
+| 10      | Pen-and-paper | <!--<a href="https://github.com/uu-sml/course-sml-public/raw/master/SML-ex_session10.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" title="Download pdf" width="20" /></a> --> |
