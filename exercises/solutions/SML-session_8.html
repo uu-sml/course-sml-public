@@ -13822,9 +13822,6 @@ Solving environment: done
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(b)">(b)<a class="anchor-link" href="#(b)">¶</a></h3><p>We want to lean a model $y = \theta_0 + \epsilon$ (with $\mathbb{E}[\epsilon]=0$) from the data $\{y_i\}_{n=1}^n$. Estimate $\theta_0$ with least squares, i.e. $\hat{\theta}_0 = \frac{1}{n}\sum_{i=1}^n y_i$.</p>
-<p>$\mkern4mu\hat{\mkern-4mu\theta}_0$
-$\hat{\theta}_0$
-$\skew{3}{\hat}\theta_0$</p>
 
 </div>
 </div>
@@ -13834,8 +13831,8 @@ $\skew{3}{\hat}\theta_0$</p>
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">beta_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="n">beta_0</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">theta_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">theta_0</span>
 </pre></div>
 
     </div>
@@ -13866,7 +13863,7 @@ $\skew{3}{\hat}\theta_0$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="(c)">(c)<a class="anchor-link" href="#(c)">¶</a></h3><p>To estimate the variance in $\hat{\beta}_0$, $\operatorname{Var}[\hat{\beta}_0]$ (a possible ‘quality measure’ of an estimator), repeat (a)-(b) $1000$ times to get $1000$ estimates of $\beta_0$, which we call $\hat{\beta}_0^1, ..., \hat{\beta}_0^{1000}$. Plot a histogram over the estimates $\hat{\beta}_0^1, ..., \hat{\beta}_0^{1000}$.</p>
+<h3 id="(c)">(c)<a class="anchor-link" href="#(c)">¶</a></h3><p>To estimate the variance in $\hat{\theta}_0$, $\operatorname{Var}[\hat{\theta}_0]$ (a possible ‘quality measure’ of an estimator), repeat (a)-(b) $1000$ times to get $1000$ estimates of $\theta_0$, which we call $\hat{\theta}_0^1, ..., \hat{\theta}_0^{1000}$. Plot a histogram over the estimates $\hat{\theta}_0^1, ..., \hat{\theta}_0^{1000}$.</p>
 
 </div>
 </div>
@@ -13876,11 +13873,11 @@ $\skew{3}{\hat}\theta_0$</p>
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="n">beta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)))</span>
+    <span class="n">theta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -13913,7 +13910,7 @@ $\skew{3}{\hat}\theta_0$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In practice we only have access to $\{y_i\}_{n=1}^n$ $(n = 100)$ and cannot estimate $\hat{\beta}_0^1, ..., \hat{\beta}_0^{1000}$ by generating new data. However, with the bootstrap method we can obtain ‘new’ data sets by sampling from the original data set $\{y_i\}_{n=1}^n$.</p>
+<p>In practice we only have access to $\{y_i\}_{n=1}^n$ $(n = 100)$ and cannot estimate $\hat{\theta}_0^1, ..., \hat{\theta}_0^{1000}$ by generating new data. However, with the bootstrap method we can obtain ‘new’ data sets by sampling from the original data set $\{y_i\}_{n=1}^n$.</p>
 
 </div>
 </div>
