@@ -13118,7 +13118,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This problem involves the <code>OJ</code> dataset (<code>Data/OJ.csv</code>)<br/>
+<p>This problem involves the <code>OJ</code> dataset (<code>data/oj.csv</code>)<br/>
 <strong>Orange Juice Data</strong></p>
 <p>The data contains 1070 purchases where the customer either purchased Citrus Hill or Minute Maid Orange Juice. A number of characteristics of the customer and product are recorded.</p>
 <p>A data frame with 1070 observations on the following 18 variables:</p>
@@ -13216,7 +13216,7 @@ PctDiscCH         1070 non-null float64
 ListPriceDiff     1070 non-null float64
 STORE             1070 non-null int64
 dtypes: float64(11), int64(5), object(2)
-memory usage: 150.5+ KB
+memory usage: 150.6+ KB
 </pre>
 </div>
 </div>
@@ -13264,11 +13264,11 @@ memory usage: 150.5+ KB
 
 <div class="output_text output_subarea output_execute_result">
 <pre>DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=2,
-            max_features=None, max_leaf_nodes=None,
-            min_impurity_decrease=0.0, min_impurity_split=None,
-            min_samples_leaf=1, min_samples_split=2,
-            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
-            splitter='best')</pre>
+                       max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort=False,
+                       random_state=None, splitter='best')</pre>
 </div>
 
 </div>
@@ -13324,7 +13324,7 @@ memory usage: 150.5+ KB
 <!-- 0 -->
 <g class="node" id="node1">
 <title>0</title>
-<path d="M382,-313.5C382,-313.5 259,-313.5 259,-313.5 253,-313.5 247,-307.5 247,-301.5 247,-301.5 247,-242.5 247,-242.5 247,-236.5 253,-230.5 259,-230.5 259,-230.5 382,-230.5 382,-230.5 388,-230.5 394,-236.5 394,-242.5 394,-242.5 394,-301.5 394,-301.5 394,-307.5 388,-313.5 382,-313.5" fill="#e58139" fill-opacity="0.337255" stroke="#000000"></path>
+<path d="M382,-313.5C382,-313.5 259,-313.5 259,-313.5 253,-313.5 247,-307.5 247,-301.5 247,-301.5 247,-242.5 247,-242.5 247,-236.5 253,-230.5 259,-230.5 259,-230.5 382,-230.5 382,-230.5 388,-230.5 394,-236.5 394,-242.5 394,-242.5 394,-301.5 394,-301.5 394,-307.5 388,-313.5 382,-313.5" fill="#f6d5bc" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="320.5" y="-298.3">LoyalCH &lt;= 0.482</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="320.5" y="-283.3">gini = 0.479</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="320.5" y="-268.3">samples = 100.0%</text>
@@ -13334,7 +13334,7 @@ memory usage: 150.5+ KB
 <!-- 1 -->
 <g class="node" id="node2">
 <title>1</title>
-<path d="M300,-194.5C300,-194.5 177,-194.5 177,-194.5 171,-194.5 165,-188.5 165,-182.5 165,-182.5 165,-123.5 165,-123.5 165,-117.5 171,-111.5 177,-111.5 177,-111.5 300,-111.5 300,-111.5 306,-111.5 312,-117.5 312,-123.5 312,-123.5 312,-182.5 312,-182.5 312,-188.5 306,-194.5 300,-194.5" fill="#399de5" fill-opacity="0.725490" stroke="#000000"></path>
+<path d="M300,-194.5C300,-194.5 177,-194.5 177,-194.5 171,-194.5 165,-188.5 165,-182.5 165,-182.5 165,-123.5 165,-123.5 165,-117.5 171,-111.5 177,-111.5 177,-111.5 300,-111.5 300,-111.5 306,-111.5 312,-117.5 312,-123.5 312,-123.5 312,-182.5 312,-182.5 312,-188.5 306,-194.5 300,-194.5" fill="#6fb8ec" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="238.5" y="-179.3">PriceDiff &lt;= 0.31</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="238.5" y="-164.3">gini = 0.338</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="238.5" y="-149.3">samples = 37.1%</text>
@@ -13346,12 +13346,12 @@ memory usage: 150.5+ KB
 <title>0-&gt;1</title>
 <path d="M291.8204,-230.3796C285.7385,-221.5534 279.2578,-212.1485 272.9859,-203.0466" fill="none" stroke="#000000"></path>
 <polygon fill="#000000" points="275.8582,-201.0465 267.302,-194.7981 270.0941,-205.0184 275.8582,-201.0465" stroke="#000000"></polygon>
-<text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="262.7761" y="-215.685">True</text>
+<text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="263.6813" y="-210.7676">True</text>
 </g>
 <!-- 4 -->
 <g class="node" id="node5">
 <title>4</title>
-<path d="M465,-194.5C465,-194.5 342,-194.5 342,-194.5 336,-194.5 330,-188.5 330,-182.5 330,-182.5 330,-123.5 330,-123.5 330,-117.5 336,-111.5 342,-111.5 342,-111.5 465,-111.5 465,-111.5 471,-111.5 477,-117.5 477,-123.5 477,-123.5 477,-182.5 477,-182.5 477,-188.5 471,-194.5 465,-194.5" fill="#e58139" fill-opacity="0.792157" stroke="#000000"></path>
+<path d="M465,-194.5C465,-194.5 342,-194.5 342,-194.5 336,-194.5 330,-188.5 330,-182.5 330,-182.5 330,-123.5 330,-123.5 330,-117.5 336,-111.5 342,-111.5 342,-111.5 465,-111.5 465,-111.5 471,-111.5 477,-117.5 477,-123.5 477,-123.5 477,-182.5 477,-182.5 477,-188.5 471,-194.5 465,-194.5" fill="#ea9b62" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="403.5" y="-179.3">LoyalCH &lt;= 0.765</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="403.5" y="-164.3">gini = 0.283</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="403.5" y="-149.3">samples = 62.9%</text>
@@ -13363,12 +13363,12 @@ memory usage: 150.5+ KB
 <title>0-&gt;4</title>
 <path d="M349.5294,-230.3796C355.6855,-221.5534 362.2451,-212.1485 368.5936,-203.0466" fill="none" stroke="#000000"></path>
 <polygon fill="#000000" points="371.4967,-205.0024 374.3467,-194.7981 365.7552,-200.9978 371.4967,-205.0024" stroke="#000000"></polygon>
-<text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="378.7331" y="-215.7103">False</text>
+<text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="377.8558" y="-210.7878">False</text>
 </g>
 <!-- 2 -->
 <g class="node" id="node3">
 <title>2</title>
-<path d="M135,-68C135,-68 12,-68 12,-68 6,-68 0,-62 0,-56 0,-56 0,-12 0,-12 0,-6 6,0 12,0 12,0 135,0 135,0 141,0 147,-6 147,-12 147,-12 147,-56 147,-56 147,-62 141,-68 135,-68" fill="#399de5" fill-opacity="0.811765" stroke="#000000"></path>
+<path d="M135,-68C135,-68 12,-68 12,-68 6,-68 0,-62 0,-56 0,-56 0,-12 0,-12 0,-6 6,0 12,0 12,0 135,0 135,0 141,0 147,-6 147,-12 147,-12 147,-56 147,-56 147,-62 141,-68 135,-68" fill="#5eafea" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="73.5" y="-52.8">gini = 0.266</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="73.5" y="-37.8">samples = 29.2%</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="73.5" y="-22.8">value = [0.158, 0.842]</text>
@@ -13383,7 +13383,7 @@ memory usage: 150.5+ KB
 <!-- 3 -->
 <g class="node" id="node4">
 <title>3</title>
-<path d="M300,-68C300,-68 177,-68 177,-68 171,-68 165,-62 165,-56 165,-56 165,-12 165,-12 165,-6 171,0 177,0 177,0 300,0 300,0 306,0 312,-6 312,-12 312,-12 312,-56 312,-56 312,-62 306,-68 300,-68" fill="#399de5" fill-opacity="0.250980" stroke="#000000"></path>
+<path d="M300,-68C300,-68 177,-68 177,-68 171,-68 165,-62 165,-56 165,-56 165,-12 165,-12 165,-6 171,0 177,0 177,0 300,0 300,0 306,0 312,-6 312,-12 312,-12 312,-56 312,-56 312,-62 306,-68 300,-68" fill="#cee6f8" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="238.5" y="-52.8">gini = 0.49</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="238.5" y="-37.8">samples = 7.9%</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="238.5" y="-22.8">value = [0.429, 0.571]</text>
@@ -13398,7 +13398,7 @@ memory usage: 150.5+ KB
 <!-- 5 -->
 <g class="node" id="node6">
 <title>5</title>
-<path d="M465,-68C465,-68 342,-68 342,-68 336,-68 330,-62 330,-56 330,-56 330,-12 330,-12 330,-6 336,0 342,0 342,0 465,0 465,0 471,0 477,-6 477,-12 477,-12 477,-56 477,-56 477,-62 471,-68 465,-68" fill="#e58139" fill-opacity="0.541176" stroke="#000000"></path>
+<path d="M465,-68C465,-68 342,-68 342,-68 336,-68 330,-62 330,-56 330,-56 330,-12 330,-12 330,-6 336,0 342,0 342,0 465,0 465,0 471,0 477,-6 477,-12 477,-12 477,-56 477,-56 477,-62 471,-68 465,-68" fill="#f1bb94" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="403.5" y="-52.8">gini = 0.432</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="403.5" y="-37.8">samples = 30.1%</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="403.5" y="-22.8">value = [0.685, 0.315]</text>
@@ -13413,7 +13413,7 @@ memory usage: 150.5+ KB
 <!-- 6 -->
 <g class="node" id="node7">
 <title>6</title>
-<path d="M630,-68C630,-68 507,-68 507,-68 501,-68 495,-62 495,-56 495,-56 495,-12 495,-12 495,-6 501,0 507,0 507,0 630,0 630,0 636,0 642,-6 642,-12 642,-12 642,-56 642,-56 642,-62 636,-68 630,-68" fill="#e58139" fill-opacity="0.960784" stroke="#000000"></path>
+<path d="M630,-68C630,-68 507,-68 507,-68 501,-68 495,-62 495,-56 495,-56 495,-12 495,-12 495,-6 501,0 507,0 507,0 630,0 630,0 636,0 642,-6 642,-12 642,-12 642,-56 642,-56 642,-62 636,-68 630,-68" fill="#e68641" stroke="#000000"></path>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="568.5" y="-52.8">gini = 0.073</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="568.5" y="-37.8">samples = 32.8%</text>
 <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="568.5" y="-22.8">value = [0.962, 0.038]</text>
@@ -13512,12 +13512,12 @@ memory usage: 150.5+ KB
   </thead>
   <tbody>
     <tr>
-      <th>CH</th>
+      <td>CH</td>
       <td>142</td>
       <td>24</td>
     </tr>
     <tr>
-      <th>MM</th>
+      <td>MM</td>
       <td>30</td>
       <td>74</td>
     </tr>
@@ -13542,13 +13542,35 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>conda install -y graphviz
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+# All requested packages already installed.
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13579,7 +13601,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered celltag_keep">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># url = 'data/email.csv'</span>
@@ -13602,7 +13624,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -13626,7 +13648,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">])</span>
@@ -13642,7 +13664,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_leaf_nodes</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -13684,7 +13706,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">()</span>
@@ -13726,10 +13748,10 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="o">!=</span> <span class="n">y_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Test error: </span><span class="si">%.3f</span><span class="s1">'</span> <span class="o">%</span> <span class="n">error</span><span class="p">)</span>
@@ -13749,19 +13771,7 @@ memory usage: 150.5+ KB
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test error: 0.048
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/johan/miniconda3/lib/python3.6/site-packages/sklearn/ensemble/forest.py:246: FutureWarning: The default value of n_estimators will change from 10 in version 0.20 to 100 in 0.22.
-  "10 in version 0.20 to 100 in 0.22.", FutureWarning)
+<pre>Test error: 0.036
 </pre>
 </div>
 </div>
@@ -13795,7 +13805,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13811,14 +13821,17 @@ memory usage: 150.5+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="(b)">(b)<a class="anchor-link" href="#(b)">¶</a></h3><p>We want to lean a model $y = \beta_0 + \epsilon$ (with $\mathbb{E}[\epsilon]=0$) from the data $\{y_i\}_{n=1}^n$. Estimate $\beta_0$ with least squares, i.e. $\hat{\beta_0} = \frac{1}{n}\sum_{i=1}^n y_i$.</p>
+<h3 id="(b)">(b)<a class="anchor-link" href="#(b)">¶</a></h3><p>We want to lean a model $y = \theta_0 + \epsilon$ (with $\mathbb{E}[\epsilon]=0$) from the data $\{y_i\}_{n=1}^n$. Estimate $\theta_0$ with least squares, i.e. $\hat{\theta}_0 = \frac{1}{n}\sum_{i=1}^n y_i$.</p>
+<p>$\mkern4mu\hat{\mkern-4mu\theta}_0$
+$\hat{\theta}_0$
+$\skew{3}{\hat}\theta_0$</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">beta_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -13835,7 +13848,7 @@ memory usage: 150.5+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13860,7 +13873,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13915,7 +13928,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13932,7 +13945,7 @@ memory usage: 150.5+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13962,7 +13975,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y_new</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
@@ -13983,7 +13996,7 @@ memory usage: 150.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="p">[]</span>
