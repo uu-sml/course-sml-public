@@ -13104,27 +13104,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="AdaBoost">AdaBoost<a class="anchor-link" href="#AdaBoost">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="9.1-Exponential-loss-vs-misclasification-loss">9.1 Exponential loss vs misclasification loss<a class="anchor-link" href="#9.1-Exponential-loss-vs-misclasification-loss">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In boosting, we label (for convenience) the classes as $+1$ and $-1$, respectively. We furthermore let our classifier $\hat y(x)$ be on the form $\hat y(x) = \text{sign}(C(x))$, i.e., a thresholding at $0$ of some real-valued function $C(x)$. Assume that we have learned some function $\widehat{C}(x)$ from training data such that we can make predictions $\hat y(x) = \text{sign}(\widehat C(x))$. Fill in the missing columns in the table below:</p>
+<h1 id="AdaBoost">AdaBoost<a class="anchor-link" href="#AdaBoost">¶</a></h1><h2 id="9.1-Exponential-loss-vs-misclasification-loss">9.1 Exponential loss vs misclasification loss<a class="anchor-link" href="#9.1-Exponential-loss-vs-misclasification-loss">¶</a></h2><p>In boosting, we label (for convenience) the classes as $+1$ and $-1$, respectively. We furthermore let our classifier $\widehat{y}(x)$ be on the form $\widehat{y}(x) = \operatorname{sign}\left(c(x)\right)$, i.e., a thresholding at $0$ of some real-valued function $c(x)$. Assume that we have learned some function $\widehat{c}(x)$ from training data such that we can make predictions $\widehat{y}(x) = \operatorname*{sign}\left(\widehat{c}(x)\right)$. Fill in the missing columns in the table below:</p>
 <table>
 <thead><tr>
-<th style="text-align:center">$\widehat{C}(x_\star)$</th>
-<th style="text-align:center">$\hat{y}_\star$</th>
-<th style="text-align:center">Exponential loss $\exp(-y_\star\widehat{C}(x_\star))$</th>
-<th style="text-align:center">Misclassification loss $I(y_\star\neq\hat{y}_\star)$</th>
+<th style="text-align:center">${\widehat{c}{(x_\star)}}$</th>
+<th style="text-align:center">$\widehat{y}_\star$</th>
+<th style="text-align:center">Exponential loss <br/>$\mathrm{exp}{\left(-y_\star\widehat{c}{(x_\star)}\right)}$</th>
+<th style="text-align:center">Misclassification loss<br/> $\mathbb{I}\left(y_\star\neq\widehat{y}_\star\right)$</th>
 <th style="text-align:center">$y_\star$</th>
 </tr>
 </thead>
@@ -13164,15 +13150,15 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_remove"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<table>
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution">¶</a></h3><table>
 <thead><tr>
-<th style="text-align:center">$\widehat{C}(x_\star)$</th>
-<th style="text-align:center">$\hat{y}_\star$</th>
-<th style="text-align:center">Exponential loss $\exp(-y_\star\widehat{C}(x_\star))$</th>
-<th style="text-align:center">Misclassification loss $I(y_\star\neq\hat{y}_\star)$</th>
+<th style="text-align:center">$\widehat{c}{(x_{\star})}$</th>
+<th style="text-align:center">$\widehat{y}_\star$</th>
+<th style="text-align:center">Exponential loss <br/>$\mathrm{exp}{\left(-y_\star\widehat{c}{(x_\star)}\right)}$</th>
+<th style="text-align:center">Misclassification loss <br/>$\mathbb{I}\left(y_\star\neq\hat{y}_\star\right)$</th>
 <th style="text-align:center">$y_\star$</th>
 </tr>
 </thead>
@@ -13207,7 +13193,7 @@ div#notebook {
 </tr>
 </tbody>
 </table>
-<p>Whereas the misclassification loss only gives the information <code>correct</code> or <code>misclassified</code>, the exponential loss contains the same information ($&lt;1$: correct, $&gt;1$ misclassfied) as well as information about the <em>margin</em> $y_\star C(x_\star)$, which in a sense gives an idea of "how much" wrong or correct the classifier is.</p>
+<p>Whereas the misclassification loss only gives the information <code>correct</code> or <code>misclassified</code>, the exponential loss contains the same information ($&lt;1$: correct, $&gt;1$ misclassfied) as well as information about the <em>margin</em> $y_\star c(x_\star)$, which in a sense gives an idea of "how much" wrong or correct the classifier is.</p>
 
 </div>
 </div>
@@ -13226,7 +13212,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># url = 'data/email.csv'</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://github.com/uu-sml/course-sml-public/raw/master/data/email.csv'</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://uu-sml.github.io/course-sml-public/data/email.csv'</span>
 <span class="n">email</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 
@@ -13287,7 +13273,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_keep">
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
@@ -13483,70 +13469,76 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="9.4-Deriving-the-AdaBoost-weights">9.4 Deriving the AdaBoost weights<a class="anchor-link" href="#9.4-Deriving-the-AdaBoost-weights">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The AdaBoost classifier can be written as 
-$$ {\hat y_{\text{boost}}(x) = \text{sign}\left( C^B(x) \right)} $$
-where the functions $C^1(x), \, \dots, C^B(x)$ are constructed sequentially as
-$$ C^b(x) = C^{b-1}(x) + \alpha_b \hat y^b(x),$$
-initialized with $C^0(x) \equiv 0$. The $b$th ensemble member $\hat y^b(x)$ is found by applying the chosen base classifier to a weighted version of the training data.
+<h2 id="9.4-Deriving-the-AdaBoost-weights">9.4 Deriving the AdaBoost weights<a class="anchor-link" href="#9.4-Deriving-the-AdaBoost-weights">¶</a></h2><p>The AdaBoost classifier can be written as 
+\begin{equation}
+    \widehat{y}_{\text{boost}}(\mathbf{x}) = \text{sign}\left( c^{(B)}(\mathbf{x}) \right)
+\end{equation}
+where the functions $c^{(1)}(\mathbf{x}), \, \dots, c^{(B)}(\mathbf{x})$ are constructed sequentially as
+\begin{equation}
+    c^{(b)}(\mathbf{x}) = c^{(b-1)}(\mathbf{x}) + \alpha^{(b)} \widehat y^{(b)}(\mathbf{x}),
+\end{equation}
+initialized with $c^{(0)}(x) \equiv 0$. The $b$th ensemble member $\widehat y^{(b)}(x)$ is found by applying the chosen base classifier to a weighted version of the training data.
 Once this has been found, we also need to compute the corresponding
-"confidence" coefficient $\alpha_b$. This is done by minimizing the weighted exponential loss of the training data,
+"confidence" coefficient $\alpha^{(b)}$. This is done by minimizing the weighted exponential loss of the training data,
 \begin{align}
-\alpha_b = \arg\min_{\alpha}\left\{\sum_{i=1}^N w_i^b \exp(- \alpha y_i \hat y^b(x_i) ) \right\}
+    \alpha^{(b)} = \arg\min_{\alpha}\left\{\sum_{i=1}^n w_i^{(b)} \exp \left(- \alpha y_i \widehat y^{(b)}(\mathbf{x}_i) \right) \right\}
 \end{align}
-where $w_i^b = \exp(-y_i C^{b-1}(x_i))$.</p>
+where $w_i^{(b)} = \exp\left(-y_i c^{(b-1)}(\mathbf{x}_i)\right)$.</p>
 <p>Show that the optimal solution is given by
-$$\alpha_b = \frac{1}{2}\log\left( \frac{1-\overline{\textrm{err}}_b}{\overline{\textrm{err}}_b} \right)$$
+\begin{equation}
+    \alpha^{(b)} = \frac{1}{2}\ln\left( \frac{1 - E_{\text{train}}^{(b)}}{E_{\text{train}}^{(b)}} \right)
+\end{equation}
 where 
-$$\overline{\textrm{err}}_b = \sum_{i=1}^N  \frac{w_i^b}{\sum_{j=1}^N w_j^b} I(y_i \neq \hat G^b(x_i)).$$</p>
-<p>_Hint 1: We use class labels $-1$ and $1$, i.e. $y_i \in \{-1, 1\}$ and $\hat y^b(x_i) \in \{-1, 1\}$. Using this fact, divide the sum in the objective function in the equation for $\alpha_b$ into one sum ranging over all correctly classified training data points and one sum ranging over all misclassified training data points._</p>
-<p>_Hint 2: You are allowed to use the fact that the objective function in the equation for $\alpha_b$ has a single stationary point corresponding to the global minima._</p>
+\begin{equation}
+    E_{\text{train}}^{(b)} = \sum_{i=1}^n  \frac{w_i^{(b)}}{\sum_{j=1}^n w_{j}^{(b)}} \mathbb{I}(y_i \neq \widehat{y}^{(b)}(\mathbf{x}_i)).
+\end{equation}</p>
+<p>_Hint 1: We use class labels $-1$ and $1$, i.e. $y_i \in \{-1, 1\}$ and $\widehat{y}^{(b)}(\mathbf{x}_i) \in \{-1, 1\}$. Using this fact, divide the sum in the objective function in the equation for $\alpha^{(b)}$ into one sum ranging over all correctly classified training data points and one sum ranging over all misclassified training data points._</p>
+<p><em>Hint 2: You are allowed to use the fact that the objective function in the equation for $\alpha^{(b)}$ has a single stationary point corresponding to the global minima.</em></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_remove"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We want to minimize the expression
-$$F(\alpha) := \sum_{i=1}^N w_i^b \exp(- \alpha y_i \hat y^b(x_i) )$$
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution">¶</a></h3><p>We want to minimize the expression
+\begin{equation}
+    F(\alpha) := \sum_{i=1}^n w_i^{(b)} \exp\left(- \alpha y_i \widehat{y}^{(b)}(\mathbf{x}_i)\right)
+\end{equation}
 with respect to $\alpha$. Using the second hint of the problem formulation, we can do this by differentiating the expression, setting the derivative to zero, and solving for $\alpha$.</p>
 <p>Before we do this, however, we make use of the first hint of the problem formulation to simplify the expression under study. Note first that using the class labels $-1$ and $1$ implies that
-$$
-y_i \hat G^b(x_i) =
-\begin{cases}
-1 &amp; \text{if } \hat y^b(x_i) = y_i,\\
--1 &amp; \text{if } \hat y^b(x_i) \neq y_i.
-\end{cases}
-$$
-Thus, the expression for F(\alpha) can be written as
-$$
-F(\alpha) = e^{-\alpha} \underbrace{\sum_{i = 1}^N  w_i^b I( \hat y^b(x_i) = y_i)}_{=: W_c} + 
-e^\alpha \underbrace{\sum_{i =1}^N  w_i^b I( \hat y^b(x_i) \neq y_i )}_{=: W_e},
-$$
+\begin{equation}
+    y_i \widehat{y}^{(b)}(\mathbf{x}_i)=
+    \begin{cases}
+         1 &amp; \text{if } \widehat{y}^{(b)}(\mathbf{x}_i) = y_i,\\
+        -1 &amp; \text{if } \widehat{y}^{(b)}(\mathbf{x}_i) \neq y_i.
+    \end{cases}
+\end{equation}
+Thus, the expression for $F(\alpha)$ can be written as
+\begin{equation}
+    F(\alpha) =
+        e^{-\alpha} \underbrace{\sum_{i = 1}^n  w_i^{(b)} \mathbb{I}\left( \widehat{y}^{(b)}(\mathbf{x}_i) = y<em>i\right)}</em>{=: W_c}</p>
+
+<pre><code>    + e^\alpha \underbrace{\sum_{i =1}^n  w_i^{(b)} \mathbb{I}\left( \widehat{y}^{(b)}(\mathbf{x}_i) \neq y_i \right)}_{=: W_e},
+</code></pre>
+<p>\end{equation}
 where we have used the indicator function to split the sum into two sums: the first ranging over all correctly classified data points, and the second ranging over all erroneously classified data points. 
 Furthermore, for notational simplicity we define $W_c$ and $W_e$ for the sum of weights of correctly classified data points and erroneously classified data points, respectively.</p>
 <p>Now, we compute the derivative and set to zero:
 $$
-\frac{dF}{d\alpha} = -e^{-\alpha} W_c + e^\alpha W_e = 0 \Longleftrightarrow
+\frac{d F}{d\alpha} = -e^{-\alpha} W_c + e^\alpha W_e = 0 \Longleftrightarrow
 e^{\alpha} W_e = e^{-\alpha} W_c
 \Longleftrightarrow
 e^{2\alpha} = \frac{W_c}{W_e}       
 \Longleftrightarrow
-\alpha = \frac{1}{2} \log \left( \frac{W_c}{W_e} \right).
+\alpha = \frac{1}{2} \ln \left( \frac{W_c}{W_e} \right).
 $$
-It remains to write the solution on the format asked for in the problem formulation. With $W := \sum_{i=1}^N w_i^b$ denoting the sum of all weights, we note first that $W_c = W-W_e$ and thus,
+It remains to write the solution on the format asked for in the problem formulation. With $W := \sum_{i=1}^n w_i^{(b)}$ denoting the sum of all weights, we note first that $W_c = W - W_e$ and thus,
 \begin{align*}
-\alpha = \frac{1}{2} \log \left( \frac{W - W_e}{W_e} \right)
-= \frac{1}{2} \log \left( \frac{1 - W_e/W}{W_e/W} \right).
+    \alpha = \frac{1}{2} \ln \left( \frac{W - W_e}{W_e} \right)
+        = \frac{1}{2} \ln \left( \frac{1 - W_e/W}{W_e/W} \right).
 \end{align*}
-Finally, noting that $\overline{\textrm{err}}_b = W_e/W$ completes the proof.</p>
+Finally, noting that $E_{\text{train}}^{(b)} = W_e/W$ completes the proof.</p>
 
 </div>
 </div>
