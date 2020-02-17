@@ -13231,9 +13231,9 @@ div#notebook {
 <span class="n">train</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">trainIndex</span><span class="p">]</span>                     <span class="c1"># training set</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">~</span><span class="n">email</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">trainIndex</span><span class="p">)]</span>      <span class="c1"># test set</span>
 
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">])</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">])</span>
 <span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">]</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">])</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">])</span>
 <span class="n">y_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">'Class'</span><span class="p">]</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">()</span>
@@ -13268,7 +13268,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="9.3-Exploring-the-AdaBoost-algorithm">9.3 Exploring the AdaBoost algorithm<a class="anchor-link" href="#9.3-Exploring-the-AdaBoost-algorithm">¶</a></h2><p>The script below illustrates the AdaBoost algorithm in the same way as was done in lecture 7. Familiarize yourself with the code and compare it to the pseudocode given in the course literature (Chapter 5 in the lecture notes). Explore what happens if you make changes in the input data and the number of trees (stumps), B, used!</p>
+<h2 id="9.3-Exploring-the-AdaBoost-algorithm">9.3 Exploring the AdaBoost algorithm<a class="anchor-link" href="#9.3-Exploring-the-AdaBoost-algorithm">¶</a></h2><p>The script below illustrates the AdaBoost algorithm in the same way as was done in lecture 7. Familiarize yourself with the code and compare it to the pseudocode given in the course literature (Chapter 7 in the lecture notes). Explore what happens if you make changes in the input data and the number of trees (stumps), B, used!</p>
 
 </div>
 </div>
