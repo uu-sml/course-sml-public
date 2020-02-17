@@ -13516,12 +13516,8 @@ with respect to $\alpha$. Using the second hint of the problem formulation, we c
 \end{equation}
 Thus, the expression for $F(\alpha)$ can be written as
 \begin{equation}
-    F(\alpha) =
-        e^{-\alpha} \underbrace{\sum_{i = 1}^n  w_i^{(b)} \mathbb{I}\left( \widehat{y}^{(b)}(\mathbf{x}_i) = y<em>i\right)}</em>{=: W_c}</p>
-
-<pre><code>    + e^\alpha \underbrace{\sum_{i =1}^n  w_i^{(b)} \mathbb{I}\left( \widehat{y}^{(b)}(\mathbf{x}_i) \neq y_i \right)}_{=: W_e},
-</code></pre>
-<p>\end{equation}
+    F(\alpha) = e^{-\alpha} \underbrace{\sum_{i = 1}^n  w_i^{(b)} \mathbb{I}\left( \widehat{y}^{(b)}(\mathbf{x}_i) = y_i\right)}_{=: W_c} + e^{\alpha} \underbrace{\sum_{i =1}^n  w_i^{(b)} \mathbb{I}\left( \widehat{y}^{(b)}(\mathbf{x}_i) \neq y_i \right)}_{=: W_e},
+\end{equation}
 where we have used the indicator function to split the sum into two sums: the first ranging over all correctly classified data points, and the second ranging over all erroneously classified data points. 
 Furthermore, for notational simplicity we define $W_c$ and $W_e$ for the sum of weights of correctly classified data points and erroneously classified data points, respectively.</p>
 <p>Now, we compute the derivative and set to zero:
