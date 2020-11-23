@@ -13487,7 +13487,7 @@ Dep. Variable:             LifeLadder   R-squared (uncentered):                 
 Model:                            OLS   Adj. R-squared (uncentered):              0.983
 Method:                 Least Squares   F-statistic:                              7452.
 Date:                Mon, 23 Nov 2020   Prob (F-statistic):                   2.59e-115
-Time:                        15:53:23   Log-Likelihood:                         -142.28
+Time:                        16:07:47   Log-Likelihood:                         -142.28
 No. Observations:                 129   AIC:                                      286.6
 Df Residuals:                     128   BIC:                                      289.4
 Df Model:                           1                                                  
@@ -13563,7 +13563,7 @@ Dep. Variable:             LifeLadder   R-squared:                       0.678
 Model:                            OLS   Adj. R-squared:                  0.670
 Method:                 Least Squares   F-statistic:                     87.76
 Date:                Mon, 23 Nov 2020   Prob (F-statistic):           1.27e-30
-Time:                        15:53:23   Log-Likelihood:                -127.01
+Time:                        16:07:48   Log-Likelihood:                -127.01
 No. Observations:                 129   AIC:                             262.0
 Df Residuals:                     125   BIC:                             273.5
 Df Model:                           3                                         
@@ -13714,7 +13714,7 @@ Dep. Variable:             LifeLadder   R-squared:                       0.737
 Model:                            OLS   Adj. R-squared:                  0.724
 Method:                 Least Squares   F-statistic:                     56.95
 Date:                Mon, 23 Nov 2020   Prob (F-statistic):           4.56e-33
-Time:                        15:53:23   Log-Likelihood:                -114.00
+Time:                        16:07:48   Log-Likelihood:                -114.00
 No. Observations:                 129   AIC:                             242.0
 Df Residuals:                     122   BIC:                             262.0
 Df Model:                           6                                         
@@ -13857,7 +13857,7 @@ strong multicollinearity or other numerical problems.
     <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Load data for all shots</span>
 <span class="c1">#shots_model=pd.read_csv('data/shots.csv')</span>
-<span class="n">shots</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://uu-sml.github.io/course-sml-public/data/shots.csv'</span><span class="p">)</span>
+<span class="n">shots_model</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://uu-sml.github.io/course-sml-public/data/shots.csv'</span><span class="p">)</span>
 <span class="n">shots_model</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14231,6 +14231,8 @@ strong multicollinearity or other numerical problems.
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>&lt;ipython-input-16-001a68180025&gt;:4: RuntimeWarning: invalid value encountered in true_divide
   prob_goal=np.divide(goalcount_dist[0],shotcount_dist[0])
+&lt;ipython-input-16-001a68180025&gt;:17: MatplotlibDeprecationWarning: Case-insensitive properties were deprecated in 3.3 and support will be removed two minor releases later
+  ax.plot(theangle, prob_goal, linestyle='none', marker= '.', markerSize= 12, color='black')
 </pre>
 </div>
 </div>
@@ -14249,7 +14251,7 @@ Model Family:                Binomial   Df Model:                            1
 Link Function:                  logit   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -2056.3
 Date:                Mon, 23 Nov 2020   Deviance:                       4112.7
-Time:                        15:53:24   Pearson chi2:                 6.70e+03
+Time:                        16:07:49   Pearson chi2:                 6.70e+03
 No. Iterations:                     6                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
@@ -14258,18 +14260,6 @@ Covariance Type:            nonrobust
 Intercept     -3.7097      0.085    -43.542      0.000      -3.877      -3.543
 Angle          3.4553      0.153     22.548      0.000       3.155       3.756
 ==============================================================================
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-16-001a68180025&gt;:17: MatplotlibDeprecationWarning: Case-insensitive properties were deprecated in 3.3 and support will be removed two minor releases later
-  ax.plot(theangle, prob_goal, linestyle='none', marker= '.', markerSize= 12, color='black')
 </pre>
 </div>
 </div>
@@ -14333,18 +14323,6 @@ Angle          3.4553      0.153     22.548      0.000       3.155       3.756
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-17-282de626f2cb&gt;:6: RuntimeWarning: invalid value encountered in true_divide
-  prob_goal=np.divide(goalcount_dist[0],shotcount_dist[0])
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                 Generalized Linear Model Regression Results                  
 ==============================================================================
@@ -14354,7 +14332,7 @@ Model Family:                Binomial   Df Model:                            1
 Link Function:                  logit   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -2010.7
 Date:                Mon, 23 Nov 2020   Deviance:                       4021.3
-Time:                        15:53:24   Pearson chi2:                 1.90e+04
+Time:                        16:07:49   Pearson chi2:                 1.90e+04
 No. Iterations:                     6                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
@@ -14363,6 +14341,18 @@ Covariance Type:            nonrobust
 Intercept      0.5282      0.107      4.914      0.000       0.318       0.739
 Distance      -0.1654      0.007    -22.908      0.000      -0.180      -0.151
 ==============================================================================
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>&lt;ipython-input-17-282de626f2cb&gt;:6: RuntimeWarning: invalid value encountered in true_divide
+  prob_goal=np.divide(goalcount_dist[0],shotcount_dist[0])
 </pre>
 </div>
 </div>
@@ -14430,7 +14420,7 @@ Model Family:                Binomial   Df Model:                            2
 Link Function:                  logit   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -1992.2
 Date:                Mon, 23 Nov 2020   Deviance:                       3984.3
-Time:                        15:53:24   Pearson chi2:                 7.12e+03
+Time:                        16:07:49   Pearson chi2:                 7.12e+03
 No. Iterations:                     7                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
@@ -14485,27 +14475,69 @@ D2             0.0038      0.000      8.358      0.000       0.003       0.005
 
 <span class="c1"># A general model for fitting goal probability</span>
 <span class="c1"># List the model variables you want here</span>
-<span class="n">model_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Angle'</span><span class="p">,</span><span class="s1">'Distance'</span><span class="p">,</span><span class="s1">'X'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">]</span>
 <span class="n">model_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Distance'</span><span class="p">]</span>
-<span class="n">model</span><span class="o">=</span><span class="s1">''</span>
-<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">model_variables</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">model</span>  <span class="o">+</span> <span class="n">v</span> <span class="o">+</span> <span class="s1">' + '</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="o">+</span> <span class="n">model_variables</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Combine factors to string 'factor1 + factor2 + factor3 + ...'</span>
+<span class="n">model</span> <span class="o">=</span> <span class="s1">' + '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_variables</span><span class="p">)</span>
 
 <span class="c1">#Fit the model</span>
-<span class="n">test_model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s2">"Goal ~ "</span> <span class="o">+</span> <span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">shots_model</span><span class="p">,</span> 
-                           <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">())</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test_model</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>        
+<span class="n">test_model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s2">"Goal ~ "</span> <span class="o">+</span> <span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">shots_model</span><span class="p">,</span>
+                     <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">())</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test_model</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
 <span class="n">b</span><span class="o">=</span><span class="n">test_model</span><span class="o">.</span><span class="n">params</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 
-<span class="c1">#Return xG value for more general model</span>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:                   Goal   No. Observations:                 7134
+Model:                            GLM   Df Residuals:                     7132
+Model Family:                Binomial   Df Model:                            1
+Link Function:                  logit   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -2010.7
+Date:                Mon, 23 Nov 2020   Deviance:                       4021.3
+Time:                        16:07:49   Pearson chi2:                 1.90e+04
+No. Iterations:                     6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.5282      0.107      4.914      0.000       0.318       0.739
+Distance      -0.1654      0.007    -22.908      0.000      -0.180      -0.151
+==============================================================================
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered celltag_keep">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Return xG value for more general model</span>
 <span class="k">def</span> <span class="nf">calculate_xG</span><span class="p">(</span><span class="n">sh</span><span class="p">):</span>    
    <span class="n">bsum</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">model_variables</span><span class="p">):</span>
        <span class="n">bsum</span><span class="o">=</span><span class="n">bsum</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sh</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
    <span class="n">xG</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">bsum</span><span class="p">))</span> 
-   <span class="k">return</span> <span class="n">xG</span>   
+   <span class="k">return</span> <span class="n">xG</span>
 
 <span class="c1">#Add an xG to my dataframe</span>
 <span class="n">xG</span><span class="o">=</span><span class="n">shots_model</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calculate_xG</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
@@ -14547,33 +14579,6 @@ D2             0.0038      0.000      8.358      0.000       0.003       0.005
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>                 Generalized Linear Model Regression Results                  
-==============================================================================
-Dep. Variable:                   Goal   No. Observations:                 7134
-Model:                            GLM   Df Residuals:                     7132
-Model Family:                Binomial   Df Model:                            1
-Link Function:                  logit   Scale:                          1.0000
-Method:                          IRLS   Log-Likelihood:                -2010.7
-Date:                Mon, 23 Nov 2020   Deviance:                       4021.3
-Time:                        15:53:25   Pearson chi2:                 1.90e+04
-No. Iterations:                     6                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          z      P&gt;|z|      [0.025      0.975]
-------------------------------------------------------------------------------
-Intercept      0.5282      0.107      4.914      0.000       0.318       0.739
-Distance      -0.1654      0.007    -22.908      0.000      -0.180      -0.151
-==============================================================================
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 
