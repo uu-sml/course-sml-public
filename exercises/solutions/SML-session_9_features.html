@@ -14351,6 +14351,19 @@ The offset is: 50.179
 <span class="n">model</span> <span class="o">=</span> <span class="n">skl_lm</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s1">'none'</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
+<span class="c1"># Number of parameters of logistic regression model</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">size</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">get_params</span><span class="p">()[</span><span class="s1">'fit_intercept'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The number of parameters is: </span><span class="si">{k:d}</span><span class="s1">'</span><span class="p">)</span>
+    
+<span class="c1"># Compute maximum log-likelihood</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span>
+<span class="n">loglik</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The log-likelihood is: </span><span class="si">{loglik:.3f}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="c1"># Compute AIC</span>
+<span class="n">AIC</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="n">loglik</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The AIC is: </span><span class="si">{AIC:.3f}</span><span class="s1">'</span><span class="p">)</span>
+
 <span class="c1"># Create a 2D map of predicted probabilities</span>
 <span class="n">pgoal_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">65</span><span class="p">,</span><span class="mi">65</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65</span><span class="p">):</span>
@@ -14389,6 +14402,19 @@ The offset is: 50.179
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The number of parameters is: 2
+The log-likelihood is: -2010.671
+The AIC is: 4025.341
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
